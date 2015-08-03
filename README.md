@@ -30,4 +30,13 @@ TOTAL                        12      0   100%
 Ran 3 tests in 0.010s
 
 OK
+
+$ pylint --msg-template='{msg_id}:{line:3d},{column:3d}: {path}: {msg}' -r n project1/                                                                                                             20 ↵
+No config file found, using default configuration
+************* Module project1
+C0111:  1,  0: project1/__init__.py: Missing module docstring
+************* Module project1.authentication
+C0111:  4,  0: project1/authentication.py: Missing function docstring
+W0703: 13, 11: project1/authentication.py: Catching too general exception Exception
+W0612: 13, 22: project1/authentication.py: Unused variable 'exc'
 ```
